@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
+import { Environment, OrbitControls, ScrollControls } from "@react-three/drei";
 
 import "./style.css";
 import MacContainer from "./MacContainer";
@@ -14,7 +14,9 @@ function App() {
           "https://dl.polyhaven.org/file/ph-assets/HDRIs/exr/4k/brown_photostudio_02_4k.exr",
         ]}
       />
-      <MacContainer />
+      <ScrollControls pages={3}>
+        <MacContainer />
+      </ScrollControls>
     </Canvas>
   );
 }
